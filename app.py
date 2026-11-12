@@ -40,6 +40,14 @@ ax.scatter(view["GRE Score"], view["Chance of Admit"], alpha=0.6)
 ax.set_xlabel("GRE Score")
 ax.set_ylabel("Chance of Admit")
 ax.set_title("GRE Score vs Chance of Admit")
+
+st.subheader("CGPA distribution")
+fig2, ax2 = plt.subplots()
+ax2.hist(view["CGPA"], bins=15)
+ax2.set_xlabel("CGPA")
+ax2.set_ylabel("Number of students")
+st.pyplot(fig2)
+
 st.pyplot(fig)
 
 # Data table
